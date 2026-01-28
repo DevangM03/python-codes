@@ -23,8 +23,10 @@ for i in range(len(sentence)):
         
         if match:
             print("Word found at index", i)
+            match = True
             break   
 
 # after checking whole sentence
 if not found:
     print("Word not found")
+
