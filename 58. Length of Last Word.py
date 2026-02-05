@@ -1,19 +1,8 @@
 class Solution:
     def lengthOfLastWord(self, s: str) -> int:
-        i = len(s) - 1
+        return len(s.strip().split()[-1])
 
-        # skip trailing spaces
-        while i >= 0 and s[i] == ' ':
-            i -= 1
-
-        length = 0
-        # count last word
-        while i >= 0 and s[i] != ' ':
-            length += 1
-            i -= 1
-
-        return length
-    
 sol = Solution()
-print(sol.lengthOfLastWord("My name is ram    "))  
+print(sol.lengthOfLastWord("My name is Devan    "))
+
 
